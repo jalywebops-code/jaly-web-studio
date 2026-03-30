@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Left — text */}
           <div>
             {/* Eyebrow */}
@@ -74,14 +74,14 @@ From Websites with AI integrations, to mobile apps and custom Chrome Extensions�
           </div>
 
           {/* Right — image */}
-          <div className="hidden lg:block relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="hidden lg:flex items-stretch self-stretch">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full">
               <Image
                 src="/laptop-colorful.png"
                 alt="Colorfully lit laptop representing modern web development"
                 width={800}
                 height={900}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 priority
               />
             </div>
