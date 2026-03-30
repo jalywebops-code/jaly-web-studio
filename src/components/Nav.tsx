@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
+  { href: "/work", label: "About Jaly Web" },
   { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -37,15 +37,20 @@ export default function Nav() {
         aria-label="Main navigation"
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
       >
-        {/* Wordmark */}
+        {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight focus-ring rounded"
+          className="focus-ring rounded"
           aria-label="Jaly Web Studio — home"
         >
-          <span className="text-brand-green">Jaly</span>
-          <span className="text-brand-purple">Web</span>
-          <span className="text-[#111111]"> Studio</span>
+          <Image
+            src="/logo.png"
+            alt="Jaly Web Studio"
+            width={240}
+            height={60}
+            className="h-[60px] w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
@@ -66,7 +71,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact"
-            className="ml-2 inline-flex items-center px-4 py-2 rounded-md bg-brand-purple text-white text-sm font-semibold hover:bg-purple-800 transition-colors focus-ring"
+            className="ml-2 inline-flex items-center px-4 py-2 rounded-md bg-brand-purple text-white text-sm font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
           >
             Get in Touch
           </Link>
@@ -137,7 +142,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact"
-            className="mt-2 inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-brand-purple text-white text-sm font-semibold hover:bg-purple-800 transition-colors focus-ring"
+            className="mt-2 inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-brand-purple text-white text-sm font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
           >
             Get in Touch
           </Link>

@@ -26,7 +26,7 @@ export default function CTABanner({
         </p>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-white text-brand-purple text-base font-bold hover:bg-purple-50 transition-colors focus-ring shadow-lg"
+          className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-white text-brand-purple text-base font-bold hover:bg-purple-50 transition-colors focus-ring shadow-lg btn-animate"
         >
           Get in Touch
         </Link>

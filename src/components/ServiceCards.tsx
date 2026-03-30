@@ -1,8 +1,8 @@
 const services = [
   {
-    title: "Chrome Extensions",
+    title: "iOS / Android Apps",
     description:
-      "Manifest V3 extensions that are fast, secure, and designed for real user workflows. From productivity tools to browser automation.",
+      "Native mobile apps built for iOS and Android that feel like they belong on the device. From concept to App Store and Play Store submission — clean architecture, smooth performance, and AI-ready from the ground up.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -14,19 +14,15 @@ const services = [
         className="w-6 h-6"
         aria-hidden="true"
       >
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="4" />
-        <line x1="12" y1="2" x2="12" y2="8" />
-        <line x1="12" y1="16" x2="12" y2="22" />
-        <line x1="2" y1="12" x2="8" y2="12" />
-        <line x1="16" y1="12" x2="22" y2="12" />
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+        <line x1="12" y1="18" x2="12.01" y2="18" />
       </svg>
     ),
   },
   {
-    title: "Web Apps",
+    title: "Web Apps / Chrome Extensions",
     description:
-      "Full-stack applications built with Next.js and TypeScript. Scalable, maintainable, and optimised for performance from the start.",
+      "Full-stack web applications and Manifest V3 Chrome extensions built with Next.js and TypeScript. Scalable, maintainable, and built to perform — with hooks for AI features like smart search, summarization, and Claude API integrations where they add real value.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -45,9 +41,9 @@ const services = [
     ),
   },
   {
-    title: "SEO Blogs",
+    title: "SEO & AEO Optimized Websites and Blogs",
     description:
-      "Content-first sites built for search. Programmatic SEO, Core Web Vitals, JSON-LD structured data, and MDX-powered content pipelines.",
+      "Websites built to rank in search and surface in AI-generated answers. Topic clustering, Core Web Vitals, JSON-LD structured data, and AEO-optimized content — so you show up whether someone's Googling or asking ChatGPT.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -59,7 +55,34 @@ const services = [
         className="w-6 h-6"
         aria-hidden="true"
       >
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    ),
+  },
+  {
+    title: "AI-Powered Features & Integrations",
+    description:
+      "AI isn't a product — it's a layer. I build intelligent features into websites, apps, and workflows: chatbots that actually know your business, content pipelines that scale without the overhead, and automations that run while you sleep. If there's a smarter way to do it, we'll find it.",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+        aria-hidden="true"
+      >
+        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+        <path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z" />
+        <path d="M4 10a2 2 0 0 1 2-2h2a2 2 0 0 1 0 4H6a2 2 0 0 1-2-2z" />
+        <path d="M16 10a2 2 0 0 1 2-2h2a2 2 0 0 1 0 4h-2a2 2 0 0 1-2-2z" />
+        <line x1="12" y1="8" x2="12" y2="8.01" />
+        <line x1="12" y1="16" x2="12" y2="16.01" />
+        <line x1="8" y1="12" x2="8" y2="12.01" />
+        <line x1="16" y1="12" x2="16" y2="12.01" />
       </svg>
     ),
   },
@@ -82,27 +105,6 @@ const services = [
         <polyline points="14 2 14 8 20 8" />
         <line x1="8" y1="13" x2="16" y2="13" />
         <line x1="8" y1="17" x2="12" y2="17" />
-      </svg>
-    ),
-  },
-  {
-    title: "Full Websites",
-    description:
-      "End-to-end websites for businesses and creators. Design system, CMS integration, analytics, accessibility, and ongoing support.",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6"
-        aria-hidden="true"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <line x1="2" y1="12" x2="22" y2="12" />
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
     ),
   },

@@ -6,29 +6,29 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Chrome extensions, web apps, SEO blogs, landing pages, and full websites — built fast, accessible, and optimised to convert.",
+    "iOS/Android apps, web apps, Chrome extensions, SEO & AEO websites, AI integrations, and landing pages — built fast, accessible, and built to perform.",
 };
 
-const serviceDetails = [
+const processSteps = [
   {
-    title: "Chrome Extensions",
-    body: "We build Manifest V3 Chrome extensions using React and TypeScript. Whether it's a productivity tool, content modifier, or browser automation helper — we handle everything from the popup UI to background service workers and Chrome Storage sync. Secure, lightweight, and ready for the Chrome Web Store.",
+    step: "01",
+    title: "Discovery Call",
+    body: "We start with a conversation, not a proposal. Tell me what you're building, what's not working, or what you wish existed. I'll ask the right questions and give you an honest read on what it'll actually take.",
   },
   {
-    title: "Web Apps",
-    body: "Full-stack applications built on Next.js with TypeScript strict mode, Tailwind CSS, and Supabase or PlanetScale backends. We architect for scale from day one — proper data modelling, auth patterns, and API design — so you're not rewriting things six months later.",
+    step: "02",
+    title: "Scope & Plan",
+    body: "No vague estimates. I'll put together a clear scope of work — what gets built, how long it takes, and what it costs. If something's out of scope or a better approach exists, I'll tell you before we start.",
   },
   {
-    title: "SEO Blogs",
-    body: "Programmatic SEO sites that rank. We combine topic clustering, Core Web Vitals optimisation, JSON-LD structured data, and MDX content pipelines to build content machines that compound over time. Not just a blog — a growth channel.",
+    step: "03",
+    title: "Build",
+    body: "I build in focused sprints with regular check-ins. You'll see progress early and often — not a big reveal at the end. Feedback is welcome throughout, not just at launch.",
   },
   {
-    title: "Landing Pages",
-    body: "High-converting landing pages that load in under a second. We nail the copy structure (problem → solution → proof → CTA), keep the layout clean, and make sure nothing gets in the way of someone clicking your button. A/B-test-ready from the start.",
-  },
-  {
-    title: "Full Websites",
-    body: "End-to-end websites for businesses, studios, and creators. Design system, headless CMS integration (Sanity, Contentful, or Notion), analytics, SEO, accessibility, performance monitoring, and ongoing support. One partner for the whole thing.",
+    step: "04",
+    title: "Launch & Hand Off",
+    body: "When we ship, you own it. Full code access, documentation, and a walkthrough of how everything works. No lock-in, no mystery. And if you need ongoing support, I'm here for that too.",
   },
 ];
 
@@ -60,43 +60,43 @@ export default function ServicesPage() {
       {/* Service cards */}
       <ServiceCards />
 
-      {/* Service details */}
+      {/* How it works */}
       <section
-        className="py-24 bg-white"
-        aria-labelledby="service-details-heading"
+        className="py-24 bg-gray-50"
+        aria-labelledby="process-heading"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            id="service-details-heading"
-            className="text-3xl font-extrabold text-[#111111] mb-14 tracking-tight"
-          >
-            How We Approach Each Service
-          </h2>
-          <div className="space-y-12">
-            {serviceDetails.map(({ title, body }, i) => (
+          <div className="mb-14">
+            <p className="text-sm font-semibold uppercase tracking-widest text-brand-purple mb-3">
+              The Process
+            </p>
+            <h2
+              id="process-heading"
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#111111] text-balance"
+            >
+              What Working Together Looks Like
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {processSteps.map(({ step, title, body }) => (
               <article
-                key={title}
-                className="grid grid-cols-1 md:grid-cols-[2rem_1fr] gap-6 items-start"
+                key={step}
+                className="p-8 bg-white border border-gray-200 rounded-xl"
               >
-                <span
-                  className="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-purple-50 text-brand-purple text-sm font-bold shrink-0 mt-1"
-                  aria-hidden="true"
-                >
-                  {i + 1}
+                <span className="inline-block text-4xl font-extrabold text-brand-purple opacity-20 mb-4 leading-none">
+                  {step}
                 </span>
-                <div>
-                  <h3 className="text-xl font-bold text-[#111111] mb-3">
-                    {title}
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed max-w-2xl">
-                    {body}
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-[#111111] mb-3">
+                  {title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed text-sm">
+                  {body}
+                </p>
               </article>
             ))}
           </div>
 
-          <div className="mt-16 pt-12 border-t border-gray-100">
+          <div className="mt-14">
             <p className="text-gray-500 text-lg leading-relaxed max-w-2xl">
               Not sure which service fits your project?{" "}
               <Link
@@ -105,7 +105,7 @@ export default function ServicesPage() {
               >
                 Get in touch
               </Link>{" "}
-              and we&rsquo;ll help you figure it out.
+              and we&rsquo;ll figure it out together.
             </p>
           </div>
         </div>

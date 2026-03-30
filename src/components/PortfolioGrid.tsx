@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface PortfolioItem {
   id: string;
@@ -7,17 +8,19 @@ interface PortfolioItem {
   tags: string[];
   isReal: boolean;
   href: string;
+  image?: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
-    id: "tab-manager-pro",
-    title: "Tab Manager Pro",
+    id: "wordsearch",
+    title: "WordSearch — Site-Wide Text Finder",
     description:
-      "A Chrome extension that intelligently groups, suspends, and searches browser tabs. Built with Manifest V3, React, and TypeScript. 500+ active users.",
-    tags: ["Chrome Extension", "React", "TypeScript", "Manifest V3"],
+      "A Chrome extension that scans an entire website for any word or phrase — not just the current page. Built for researchers, SEOs, and power users who need to find content fast across dozens of pages.",
+    tags: ["Chrome Extension", "TypeScript", "Manifest V3"],
     isReal: true,
-    href: "/work#tab-manager-pro",
+    href: "/work#wordsearch",
+    image: "/work-wordsearch.png",
   },
   {
     id: "placeholder-2",
@@ -37,14 +40,6 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "placeholder-4",
-    title: "Coming Soon",
-    description: "Next project in progress.",
-    tags: [],
-    isReal: false,
-    href: "/work",
-  },
-  {
-    id: "placeholder-5",
     title: "Coming Soon",
     description: "Next project in progress.",
     tags: [],
@@ -103,24 +98,33 @@ export default function PortfolioGrid({ limit }: PortfolioGridProps) {
                 id={item.id}
                 className="group flex flex-col p-8 border border-gray-200 rounded-xl bg-white hover:border-brand-purple hover:shadow-md transition-all duration-200 focus-ring"
               >
-                {/* Placeholder image area */}
-                <div
-                  className="w-full h-44 rounded-lg bg-gradient-to-br from-purple-50 to-green-50 mb-6 flex items-center justify-center"
-                  aria-label="Tab Manager Pro screenshot placeholder"
-                >
-                  <svg
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    className="w-12 h-12 text-brand-purple opacity-40"
-                    aria-hidden="true"
-                  >
-                    <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="2" />
-                    <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="2" />
-                    <line x1="24" y1="2" x2="24" y2="16" stroke="currentColor" strokeWidth="2" />
-                    <line x1="24" y1="32" x2="24" y2="46" stroke="currentColor" strokeWidth="2" />
-                    <line x1="2" y1="24" x2="16" y2="24" stroke="currentColor" strokeWidth="2" />
-                    <line x1="32" y1="24" x2="46" y2="24" stroke="currentColor" strokeWidth="2" />
-                  </svg>
+                {/* Screenshot or placeholder */}
+                <div className="w-full h-44 rounded-lg overflow-hidden mb-6">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={`${item.title} screenshot`}
+                      width={600}
+                      height={176}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-purple-50 to-green-50 flex items-center justify-center">
+                      <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        className="w-12 h-12 text-brand-purple opacity-40"
+                        aria-hidden="true"
+                      >
+                        <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="2" />
+                        <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="2" />
+                        <line x1="24" y1="2" x2="24" y2="16" stroke="currentColor" strokeWidth="2" />
+                        <line x1="24" y1="32" x2="24" y2="46" stroke="currentColor" strokeWidth="2" />
+                        <line x1="2" y1="24" x2="16" y2="24" stroke="currentColor" strokeWidth="2" />
+                        <line x1="32" y1="24" x2="46" y2="24" stroke="currentColor" strokeWidth="2" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">

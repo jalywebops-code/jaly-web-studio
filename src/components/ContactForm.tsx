@@ -4,11 +4,11 @@ import { useState, FormEvent } from "react";
 
 type ProjectType =
   | ""
-  | "Chrome Extension"
-  | "Web App"
-  | "SEO Blog"
+  | "iOS/Android App"
+  | "Web App / Chrome Extension"
+  | "SEO and AEO Optimized Website or Blog"
+  | "AI-Powered Features & Integrations"
   | "Landing Page"
-  | "Full Website"
   | "Other";
 
 interface FormState {
@@ -26,11 +26,11 @@ interface FormErrors {
 }
 
 const projectTypes: ProjectType[] = [
-  "Chrome Extension",
-  "Web App",
-  "SEO Blog",
+  "iOS/Android App",
+  "Web App / Chrome Extension",
+  "SEO and AEO Optimized Website or Blog",
+  "AI-Powered Features & Integrations",
   "Landing Page",
-  "Full Website",
   "Other",
 ];
 
@@ -278,7 +278,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-md bg-brand-purple text-white text-base font-bold hover:bg-purple-800 disabled:opacity-60 disabled:cursor-not-allowed transition-colors focus-ring"
+        className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-md bg-brand-purple text-white text-base font-bold hover:bg-purple-800 disabled:opacity-60 disabled:cursor-not-allowed transition-colors focus-ring btn-animate"
         aria-busy={submitting}
       >
         {submitting ? (

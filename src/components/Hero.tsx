@@ -58,13 +58,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/work"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md border-2 border-[#111111] text-[#111111] text-base font-semibold hover:bg-[#111111] hover:text-white transition-colors focus-ring"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md border-2 border-[#111111] text-[#111111] text-base font-semibold hover:bg-[#111111] hover:text-white transition-colors focus-ring btn-animate"
             >
               See My Work
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
             >
               Get in Touch
             </Link>

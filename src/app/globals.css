@@ -23,4 +23,14 @@ body {
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2;
   }
+  .btn-animate {
+    @apply transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.18);
+  }
+  .btn-animate:hover {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.22);
+  }
+  .btn-animate:active {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  }
 }

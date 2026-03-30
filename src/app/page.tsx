@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ServiceCards limit={3} />
+      <ServiceCards limit={4} />
       <PortfolioGrid limit={3} />
       <CTABanner />
     </>
