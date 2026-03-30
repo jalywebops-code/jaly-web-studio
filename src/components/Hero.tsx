@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Left — text */}
           <div>
             {/* Eyebrow */}
@@ -73,16 +73,14 @@ From Websites with AI integrations, to mobile apps and custom Chrome Extensions�
             </div>
           </div>
 
-          {/* Right — image */}
-          <div className="hidden lg:block">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ maxHeight: "420px" }}>
+          {/* Right — image, matched to left column height via absolute fill */}
+          <div className="hidden lg:block relative" style={{ minHeight: "560px" }}>
+            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/laptop-colorful.png"
                 alt="Colorfully lit laptop representing modern web development"
-                width={800}
-                height={900}
-                className="w-full object-cover object-center"
-                style={{ maxHeight: "420px" }}
+                fill
+                className="object-cover object-center"
                 priority
               />
             </div>
