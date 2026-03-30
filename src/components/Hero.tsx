@@ -1,0 +1,76 @@
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <section
+      className="relative overflow-hidden bg-white pt-24 pb-32"
+      aria-label="Hero"
+    >
+      {/* Decorative background grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+          maskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%)",
+        }}
+      />
+
+      {/* Decorative purple blob */}
+      <div
+        className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full opacity-[0.06] pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(circle, #5A1F94 0%, transparent 70%)",
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <p className="inline-flex items-center gap-2 text-sm font-semibold text-brand-purple mb-6 tracking-wide uppercase">
+            <span
+              className="inline-block w-6 h-px bg-brand-purple"
+              aria-hidden="true"
+            />
+            Jaly Web Studio
+          </p>
+
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#111111] leading-[1.05] text-balance mb-6">
+            We Build Digital Products{" "}
+            <span className="text-brand-purple">That Perform.</span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl sm:text-2xl text-gray-500 leading-relaxed max-w-2xl mb-10">
+            From Chrome extensions to full websites — fast, accessible, and
+            optimised for results from day one.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/work"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md border-2 border-[#111111] text-[#111111] text-base font-semibold hover:bg-[#111111] hover:text-white transition-colors focus-ring"
+            >
+              See My Work
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
