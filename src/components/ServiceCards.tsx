@@ -1,4 +1,5 @@
-// Order: SEO&AEO(green), iOS/Android(purple), Web Apps/Chrome(purple), AI-Powered(green), Landing Pages(green)
+// 2x2 grid: top-left green, top-right purple, bottom-left purple, bottom-right green
+// (also alternates correctly in single-column mobile view)
 const tileColors = [
   { bg: "bg-green-50",  border: "border-green-100",  hover: "hover:border-brand-green",  icon: "text-brand-green",  iconHover: "group-hover:bg-green-100"  },
   { bg: "bg-purple-50", border: "border-purple-100", hover: "hover:border-brand-purple", icon: "text-brand-purple", iconHover: "group-hover:bg-purple-100" },
@@ -142,7 +143,7 @@ export default function ServiceCards({ limit }: ServiceCardsProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {displayed.map((service, i) => {
             const colors = tileColors[i % tileColors.length];
             return (

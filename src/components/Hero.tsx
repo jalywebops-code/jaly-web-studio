@@ -53,8 +53,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-gray-500 leading-relaxed mb-10">
-              From Chrome extensions to full websites — fast, accessible, and
-              optimised for results from day one.
+From Websites with AI integrations, to mobile apps and custom Chrome Extensions— built fast, accessible, and optimised to perform from day one.
             </p>
 
             {/* CTAs */}
