@@ -87,20 +87,12 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Jaly Web Studio. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/sitemap.xml"
-              className="hover:text-[#111111] transition-colors focus-ring rounded"
-            >
-              Sitemap
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:text-[#111111] transition-colors focus-ring rounded"
-            >
-              jalywebops@gmail.com
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="hover:text-[#111111] transition-colors focus-ring rounded"
+          >
+            jalywebops@gmail.com
+          </Link>
         </div>
       </div>
     </footer>

@@ -59,12 +59,6 @@ From Websites with AI integrations, to mobile apps and custom Chrome Extensionsâ
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/work"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-green text-white text-base font-semibold hover:bg-green-900 transition-colors focus-ring btn-animate"
-              >
-                See My Work
-              </Link>
-              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
               >
