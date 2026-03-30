@@ -9,10 +9,10 @@ const navLinks = [
 ];
 
 const servicesList = [
-  "iOS / Android Apps",
-  "Web Apps / Chrome Extensions",
   "SEO & AEO Optimized Websites and Blogs",
   "AI-Powered Features & Integrations",
+  "Web Apps / Chrome Extensions",
+  "iOS / Android Apps",
   "Landing Pages",
 ];
 
