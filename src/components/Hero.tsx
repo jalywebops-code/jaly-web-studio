@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -32,42 +33,59 @@ export default function Hero() {
       />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <p className="inline-flex items-center gap-2 text-sm font-semibold text-brand-purple mb-6 tracking-wide uppercase">
-            <span
-              className="inline-block w-6 h-px bg-brand-purple"
-              aria-hidden="true"
-            />
-            Jaly Web Studio
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left — text */}
+          <div>
+            {/* Eyebrow */}
+            <p className="inline-flex items-center gap-2 text-sm font-semibold text-brand-purple mb-6 tracking-wide uppercase">
+              <span
+                className="inline-block w-6 h-px bg-brand-purple"
+                aria-hidden="true"
+              />
+              Jaly Web Studio
+            </p>
 
-          {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#111111] leading-[1.05] text-balance mb-6">
-            We Build Digital Products{" "}
-            <span className="text-brand-green">That </span><span className="text-brand-purple">Perform.</span>
-          </h1>
+            {/* Headline */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#111111] leading-[1.05] text-balance mb-6">
+              We Build Digital Products{" "}
+              <span className="text-brand-green">That </span><span className="text-brand-purple">Perform.</span>
+            </h1>
 
-          {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-gray-500 leading-relaxed max-w-2xl mb-10">
-            From Chrome extensions to full websites — fast, accessible, and
-            optimised for results from day one.
-          </p>
+            {/* Subheadline */}
+            <p className="text-xl sm:text-2xl text-gray-500 leading-relaxed mb-10">
+              From Chrome extensions to full websites — fast, accessible, and
+              optimised for results from day one.
+            </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/work"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-green text-white text-base font-semibold hover:bg-green-900 transition-colors focus-ring btn-animate"
-            >
-              See My Work
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
-            >
-              Get in Touch
-            </Link>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/work"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-green text-white text-base font-semibold hover:bg-green-900 transition-colors focus-ring btn-animate"
+              >
+                See My Work
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-purple text-white text-base font-semibold hover:bg-purple-800 transition-colors focus-ring btn-animate"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+
+          {/* Right — image */}
+          <div className="hidden lg:block relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/laptop-colorful.png"
+                alt="Colorfully lit laptop representing modern web development"
+                width={800}
+                height={900}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
