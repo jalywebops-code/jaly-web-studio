@@ -15,10 +15,6 @@ export const metadata: Metadata = {
     default: "Jaly Web Studio — Digital Products That Perform",
     template: "%s | Jaly Web Studio",
   },
-  icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
-  },
   description:
     "Jaly Web Studio builds Chrome extensions, web apps, SEO blogs, landing pages, and full websites that are fast, accessible, and built to convert.",
   openGraph: {
