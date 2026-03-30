@@ -1,3 +1,12 @@
+// Order: SEO&AEO(green), iOS/Android(purple), Web Apps/Chrome(purple), AI-Powered(green), Landing Pages(green)
+const tileColors = [
+  { bg: "bg-green-50",  border: "border-green-100",  hover: "hover:border-brand-green",  icon: "text-brand-green",  iconHover: "group-hover:bg-green-100"  },
+  { bg: "bg-purple-50", border: "border-purple-100", hover: "hover:border-brand-purple", icon: "text-brand-purple", iconHover: "group-hover:bg-purple-100" },
+  { bg: "bg-purple-50", border: "border-purple-100", hover: "hover:border-brand-purple", icon: "text-brand-purple", iconHover: "group-hover:bg-purple-100" },
+  { bg: "bg-green-50",  border: "border-green-100",  hover: "hover:border-brand-green",  icon: "text-brand-green",  iconHover: "group-hover:bg-green-100"  },
+  { bg: "bg-green-50",  border: "border-green-100",  hover: "hover:border-brand-green",  icon: "text-brand-green",  iconHover: "group-hover:bg-green-100"  },
+];
+
 const services = [
   {
     title: "SEO & AEO Optimized Websites and Blogs",
@@ -134,22 +143,25 @@ export default function ServiceCards({ limit }: ServiceCardsProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayed.map((service) => (
-            <article
-              key={service.title}
-              className="group p-8 border border-gray-200 rounded-xl bg-white hover:border-brand-purple hover:shadow-md transition-all duration-200 cursor-default"
-            >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50 text-brand-purple mb-5 group-hover:bg-purple-50 transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="text-lg font-bold text-[#111111] mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </article>
-          ))}
+          {displayed.map((service, i) => {
+            const colors = tileColors[i % tileColors.length];
+            return (
+              <article
+                key={service.title}
+                className={`group p-8 border rounded-xl ${colors.bg} ${colors.border} ${colors.hover} hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-default`}
+              >
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white ${colors.icon} mb-5 ${colors.iconHover} transition-colors`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#111111] mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

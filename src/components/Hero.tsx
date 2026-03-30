@@ -45,7 +45,7 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#111111] leading-[1.05] text-balance mb-6">
             We Build Digital Products{" "}
-            <span className="text-brand-purple">That Perform.</span>
+            <span className="text-brand-green">That </span><span className="text-brand-purple">Perform.</span>
           </h1>
 
           {/* Subheadline */}
@@ -58,7 +58,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/work"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md border-2 border-[#111111] text-[#111111] text-base font-semibold hover:bg-[#111111] hover:text-white transition-colors focus-ring btn-animate"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-brand-green text-white text-base font-semibold hover:bg-green-900 transition-colors focus-ring btn-animate"
             >
               See My Work
             </Link>
